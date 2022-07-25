@@ -1,13 +1,16 @@
 package com.mysite.sbb;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 @Controller
 public class MainController {
-    @GetMapping("/sbb")
-    public String niceToMeetYou(Model model) {
-        model.addAttribute("username", "민영");
-        return "greeting";
+
+    @RequestMapping("/sbb")
+    @ResponseBody
+    public String index() {
+        return "index";
+
     }
 }
