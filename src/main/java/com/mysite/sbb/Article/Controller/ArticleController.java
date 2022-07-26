@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 import java.util.Optional;
-
+import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping("/usr/article")
@@ -49,6 +49,7 @@ public class ArticleController {
             article.setBody(body);
 
         }
+        article.setUpdateDate(LocalDateTime.now());
         articleRepository.save(article);
         return article;
     }
