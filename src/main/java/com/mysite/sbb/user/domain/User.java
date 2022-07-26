@@ -1,7 +1,6 @@
-package com.mysite.sbb.Article.domain;
+package com.mysite.sbb.user.domain;
 
 import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,15 +10,15 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@Setter
-public class Article {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private LocalDateTime regDate;
     private LocalDateTime updateDate;
-    private String title;
-    private String body;
-    private long userId;
+    private String email;
+    private String password;
+    private String name;
+
 
 }
