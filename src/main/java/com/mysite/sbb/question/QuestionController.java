@@ -42,6 +42,6 @@ public class QuestionController {
             return "question_form";
         }
         this.questionService.create(questionForm.getSubject(), questionForm.getContent());
-        return "redirect:/question/lst";
+        return "redirect:/question/list";
     }
 }
