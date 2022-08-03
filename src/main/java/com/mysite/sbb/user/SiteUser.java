@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class SiteUser {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)   //오토 인크리스 ?
     private Long id;
 
     @Column(unique = true)
